@@ -129,7 +129,7 @@ function Library:CreateWindow(Name)
 		GUI["9"]["BackgroundTransparency"] = 1;
 		GUI["9"]["Position"] = UDim2.new(1, -4, 0, 3);
 		local MouseHovering = false
-		local Frame = Button["9"]
+		local Frame = GUI["9"]
 		Frame.MouseEnter:Connect(function ()
 			MouseHovering = true
 		end)
