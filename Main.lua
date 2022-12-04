@@ -140,7 +140,7 @@ function Library:CreateWindow(Name)
 			if input.UserInputType == Enum.UserInputType.MouseButton1 and MouseHovering then
 				local tweenInfo = TweenInfo.new(3, Enum.EasingStyle.Linear)
 				local goal = {
-					Transparent = 1
+					Transparency = 1
 				}
 				local tween = TweenService:Create(GUI["1"], tweenInfo, goal)
 				tween:Play()
