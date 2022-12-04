@@ -142,7 +142,7 @@ function Library:CreateWindow(Name)
 				local goal = {
 					Transparency = 1
 				}
-				local tween = TweenService:Create(GUI["1"], tweenInfo, goal)
+				local tween = TweenService:Create(GUI["2"], tweenInfo, goal)
 				tween:Play()
 				tween.Completed:Wait()
 				GUI["1"]:Destroy()
