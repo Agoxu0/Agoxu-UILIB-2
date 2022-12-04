@@ -8,13 +8,18 @@ local TweenService = game:GetService("TweenService")
 local Library = {}
 
 function Library:CreateWindow(Name)
+	for i,v in pairs(game:GetService("CoreGui"):GetChildren()) do
+		if v.Name == "Agoxu UILIB3" then
+			v:Destroy()
+		end
+	end
 	local GUI = {
 		CurrentTab = nil
 	}
 	local Name = Name or ""
 	do -- Main
 	-- StarterGui.bad name
-	GUI["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+	GUI["1"] = Instance.new("ScreenGui", game:GetService("CoreGui"));
 	GUI["1"]["Name"] = [[Agoxu UILIB3]];
 
 	-- StarterGui.bad name.Main
@@ -123,6 +128,26 @@ function Library:CreateWindow(Name)
 		GUI["9"]["Name"] = [[ExitBtn]];
 		GUI["9"]["BackgroundTransparency"] = 1;
 		GUI["9"]["Position"] = UDim2.new(1, -4, 0, 3);
+		local MouseHovering = false
+		local Frame = Button["9"]
+		Frame.MouseEnter:Connect(function ()
+			MouseHovering = true
+		end)
+		Frame.MouseLeave:Connect(function ()
+			MouseHovering = false
+		end)
+		game:GetService("UserInputService").InputEnded:Connect(function (input, gameProcessed)
+			if input.UserInputType == Enum.UserInputType.MouseButton1 and MouseHovering then
+				local tweenInfo = TweenInfo.new(3, Enum.EasingStyle.Linear)
+				local goal = {
+					Transparent = 1
+				}
+				local tween = TweenService:Create(GUI["1"], tweenInfo, goal)
+				tween:Play()
+				tween.Completed:Wait()
+				GUI["1"]:Destroy()
+			end
+		end)
 	end
 	do -- ContentContainer
 		-- StarterGui.bad name.Main.ContentContainer
