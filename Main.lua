@@ -371,6 +371,7 @@ function Library:CreateWindow(Name)
 				Label["1d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 				-- Tab["1d"]["FontFace"] = ;
 				Label["1d"]["TextSize"] = 14;
+				Label["1d"].Text = Text
 				Label["1d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 				Label["1d"]["Size"] = UDim2.new(1, 0, 1, 0);
 				Label["1d"]["Name"] = [[Title]];
