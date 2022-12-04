@@ -1,3 +1,4 @@
+--
 -- Variables
 local viewport = workspace.CurrentCamera.ViewportSize
 local runService = game:GetService("RunService")
