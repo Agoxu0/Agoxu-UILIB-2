@@ -19,27 +19,27 @@ function Library:CreateWindow(Name)
 	}
 	local Name = Name or ""
 	do -- Main
-	-- StarterGui.bad name
-	GUI["1"] = Instance.new("ScreenGui", game:GetService("CoreGui"));
-	GUI["1"]["Name"] = [[Agoxu UILIB3]];
+		-- StarterGui.bad name
+		GUI["1"] = Instance.new("ScreenGui", game:GetService("CoreGui"));
+		GUI["1"]["Name"] = [[Agoxu UILIB3]];
 
-	-- StarterGui.bad name.Main
-	GUI["2"] = Instance.new("Frame", GUI["1"]);
-	GUI["2"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
-	GUI["2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-	GUI["2"]["Size"] = UDim2.new(0, 450, 0, 325);
-	GUI["2"]["BorderColor3"] = Color3.fromRGB(41, 41, 41);
-	GUI["2"]["Position"] = UDim2.new(0.5, 0, -1, 0);
-	GUI["2"]["Name"] = [[Main]];
-	local tweenInfo = TweenInfo.new(3, Enum.EasingStyle.Bounce)
-	local goal = {
-		Position = UDim2.new(0.5, 0, .5, 0)
-	}
-	local tween = TweenService:Create(GUI["2"], tweenInfo, goal)
+		-- StarterGui.bad name.Main
+		GUI["2"] = Instance.new("Frame", GUI["1"]);
+		GUI["2"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
+		GUI["2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+		GUI["2"]["Size"] = UDim2.new(0, 450, 0, 325);
+		GUI["2"]["BorderColor3"] = Color3.fromRGB(41, 41, 41);
+		GUI["2"]["Position"] = UDim2.new(0.5, 0, -1, 0);
+		GUI["2"]["Name"] = [[Main]];
+		local tweenInfo = TweenInfo.new(3, Enum.EasingStyle.Bounce)
+		local goal = {
+			Position = UDim2.new(0.5, 0, .5, 0)
+		}
+		local tween = TweenService:Create(GUI["2"], tweenInfo, goal)
 		tween:Play()
 
-	-- StarterGui.bad name.Main.UICorner
-	GUI["3"] = Instance.new("UICorner", GUI["2"]);
+		-- StarterGui.bad name.Main.UICorner
+		GUI["3"] = Instance.new("UICorner", GUI["2"]);
 		GUI["3"]["CornerRadius"] = UDim.new(0, 6);
 	end
 	do -- TopBar
@@ -160,7 +160,7 @@ function Library:CreateWindow(Name)
 		GUI["14"]["Size"] = UDim2.new(1, -128, 1, -42);
 		GUI["14"]["Position"] = UDim2.new(1, -6, 0, 36);
 		GUI["14"]["Name"] = [[ContentContainer]];
-		
+
 	end	
 	do -- Navigation
 		-- StarterGui.bad name.Main.Navigation
@@ -227,7 +227,7 @@ function Library:CreateWindow(Name)
 			Tab["11"]["Font"] = Enum.Font.Ubuntu;
 			Tab["11"]["BackgroundTransparency"] = 1;
 			local MouseHovering = false
-			
+
 
 			-- StarterGui.bad name.Main.Navigation.ButtonHolder.Home.UIPadding
 			Tab["12"] = Instance.new("UIPadding", Tab["11"]);
@@ -351,6 +351,61 @@ function Library:CreateWindow(Name)
 				end)
 				return Button
 			end
+			function Tab:CreateTextBox(Name,callback)
+				local callback = callback or function() end
+				local TextBox = {}
+				-- StarterGui.bad name.Main.ContentContainer.HomeTab.TextBox
+				TextBox["36"] = Instance.new("Frame", Tab["15"]);
+				TextBox["36"]["BackgroundColor3"] = Color3.fromRGB(22, 22, 22);
+				TextBox["36"]["Size"] = UDim2.new(1, 0, 0, 35);
+				TextBox["36"]["Name"] = [[TextBox]];
+
+				-- StarterGui.bad name.Main.ContentContainer.HomeTab.TextBox.UICorner
+				TextBox["37"] = Instance.new("UICorner", TextBox["36"]);
+				TextBox["37"]["CornerRadius"] = UDim.new(0, 4);
+
+				-- StarterGui.bad name.Main.ContentContainer.HomeTab.TextBox.Title
+				TextBox["38"] = Instance.new("TextLabel", TextBox["36"]);
+				TextBox["38"]["BorderSizePixel"] = 0;
+				TextBox["38"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+				TextBox["38"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+				-- TextBox["38"]["FontFace"] = ;
+				TextBox["38"]["TextSize"] = 14;
+				TextBox["38"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+				TextBox["38"]["Size"] = UDim2.new(1, 0, 1, 0);
+				TextBox["38"]["Text"] = [[Button]];
+				TextBox["38"]["Name"] = [[Title]];
+				TextBox["38"]["Font"] = Enum.Font.Ubuntu;
+				TextBox["38"]["BackgroundTransparency"] = 1;
+
+				-- StarterGui.bad name.Main.ContentContainer.HomeTab.TextBox.UIPadding
+				TextBox["39"] = Instance.new("UIPadding", TextBox["36"]);
+				TextBox["39"]["PaddingTop"] = UDim.new(0, 6);
+				TextBox["39"]["PaddingRight"] = UDim.new(0, 6);
+				TextBox["39"]["PaddingBottom"] = UDim.new(0, 6);
+				TextBox["39"]["PaddingLeft"] = UDim.new(0, 6);
+
+				-- StarterGui.bad name.Main.ContentContainer.HomeTab.TextBox.TextBox
+				TextBox["3a"] = Instance.new("TextBox", TextBox["36"]);
+				TextBox["3a"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
+				TextBox["3a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+				TextBox["3a"]["TextSize"] = 12;
+				TextBox["3a"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
+				-- TextBox["3a"]["FontFace"] = ;
+				TextBox["3a"]["PlaceholderText"] = [[Type Here]];
+				TextBox["3a"]["Size"] = UDim2.new(0.25, 0, 1, 0);
+				TextBox["3a"]["Text"] = [[]];
+				TextBox["3a"]["Position"] = UDim2.new(0.75, 0, 0, 0);
+				TextBox["3a"]["Font"] = Enum.Font.Ubuntu;
+
+				-- StarterGui.bad name.Main.ContentContainer.HomeTab.TextBox.TextBox.UICorner
+				TextBox["3b"] = Instance.new("UICorner", TextBox["3a"]);
+				TextBox["3b"]["CornerRadius"] = UDim.new(0, 4);
+				TextBox["3a"].FocusLost:Connect(function()
+					callback(TextBox["3a"].Text)
+				end)
+				return TextBox
+			end
 			function Tab:CreateLabel(Text)
 				local Text = Text or ""
 				local Label = {}
@@ -469,7 +524,7 @@ function Library:CreateWindow(Name)
 					if v == nil then
 						local percentage = math.clamp((mouse.X - Slider["24"].AbsolutePosition.X) / (Slider["24"].AbsoluteSize.X),0,1)
 						local value = math.floor(((max - min) * percentage) + min)
-					
+
 						Slider["23"].Text = tostring(value)
 						Slider["26"].Size = UDim2.fromScale(percentage,1)
 					else
@@ -491,7 +546,7 @@ function Library:CreateWindow(Name)
 				Frame.MouseLeave:Connect(function ()
 					MouseHovering = false
 				end)
-				
+
 				uis.InputBegan:Connect(function(input,gne)
 					if gne then return end
 					if input.UserInputType == Enum.UserInputType.MouseButton1 and MouseHovering then
@@ -502,7 +557,7 @@ function Library:CreateWindow(Name)
 						end
 					end
 				end)
-				
+
 				uis.InputEnded:Connect(function(input,gne)
 					if gne then return end
 					if input.UserInputType == Enum.UserInputType.MouseButton1 then
@@ -510,8 +565,8 @@ function Library:CreateWindow(Name)
 						Slider.Connection = nil
 					end
 				end)
-				
-				
+
+
 				return Slider
 			end
 			function Tab:CreateToggle(Name,callback)
@@ -612,8 +667,7 @@ function Library:CreateWindow(Name)
 			return Tab
 		end
 	end
-	
+
 	return GUI
 end
-
 return Library
