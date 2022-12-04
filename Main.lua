@@ -212,7 +212,6 @@ function Library:CreateWindow(Name)
 			local Tab = {
 				Active = false
 			}
-			local Name = Name or ""
 			local ID = ID or 0
 			-- StarterGui.bad name.Main.Navigation.ButtonHolder.Home
 			Tab["11"] = Instance.new("TextLabel", GUI["e"]);
@@ -223,7 +222,7 @@ function Library:CreateWindow(Name)
 			Tab["11"]["TextSize"] = 14;
 			Tab["11"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 			Tab["11"]["Size"] = UDim2.new(1, 0, 0, 24);
-			Tab["11"]["Text"] = Name;
+			Tab["11"]["Text"] = Name
 			Tab["11"]["Name"] = [[Home]];
 			Tab["11"]["Font"] = Enum.Font.Ubuntu;
 			Tab["11"]["BackgroundTransparency"] = 1;
