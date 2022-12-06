@@ -9,6 +9,7 @@ Library
 :CreateToggle(Name,function(bool)) --Makes Toggle
 :CreateSlider(Name,min,max,function(value)) -- Makes Slider
 :CreateLabel(Name) --Makes Label
+:CreateTextBox(Name,function(text)) -- Makes textbox
 ```
 
 Quick Example How To Use It.
@@ -31,6 +32,9 @@ main:CreateToggle("Toggle!",function(bool) -- Creates the toggle
     print(bool)
 end)
 main:CreateLabel("Label!") -- Creates the label
+main:CreateTextBox("TextBox!",function(text)
+    print(text)
+end)
 ```
 This is how it looks like
 
