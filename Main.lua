@@ -373,7 +373,7 @@ function Library:CreateWindow(Name)
 				TextBox["38"]["TextSize"] = 14;
 				TextBox["38"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 				TextBox["38"]["Size"] = UDim2.new(1, 0, 1, 0);
-				TextBox["38"]["Text"] = [[Button]];
+				TextBox["38"]["Text"] = Name
 				TextBox["38"]["Name"] = [[Title]];
 				TextBox["38"]["Font"] = Enum.Font.Ubuntu;
 				TextBox["38"]["BackgroundTransparency"] = 1;
