@@ -139,13 +139,6 @@ function Library:CreateWindow(Name)
 		end)
 		game:GetService("UserInputService").InputEnded:Connect(function (input, gameProcessed)
 			if input.UserInputType == Enum.UserInputType.MouseButton1 and MouseHovering then
-				local tweenInfo = TweenInfo.new(3, Enum.EasingStyle.Linear)
-				local goal = {
-					Transparency = 1
-				}
-				local tween = TweenService:Create(GUI["2"], tweenInfo, goal)
-				tween:Play()
-				tween.Completed:Wait()
 				GUI["1"]:Destroy()
 			end
 		end)
